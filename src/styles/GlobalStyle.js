@@ -35,8 +35,6 @@ const GlobalStyle = createGlobalStyle`
     body {
     line-height: 1;
     font-family: Roboto, sans-serif;
-    color: #000000;
-    background-image: linear-gradient(to top, #4D65A8,#6D7CE4);
     }
     ol, ul {
     list-style: none;

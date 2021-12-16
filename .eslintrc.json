@@ -24,10 +24,11 @@
                 "js": "ignorePackages"
             }
         ],
-        "react/function-component-definition":[2,
+        "react/function-component-definition":[0,
             {
                 "namedComponents": "arrow-function"
             }
-        ]
+        ],
+        "arrow-body-style": [0, "always"]
     }
 }
