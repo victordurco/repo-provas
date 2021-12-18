@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ArrowDownOutline, ArrowUpOutline } from 'react-ionicons';
 
 const OptionsInput = ({
-  handleFormDataChange, options, title,
+  handleFormDataChange, options, title, width,
 }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [choice, setChoice] = useState('');
@@ -15,7 +15,7 @@ const OptionsInput = ({
   };
 
   return (
-    <Container>
+    <Container width={width}>
       {title}
       <ChoiceView>{choice}</ChoiceView>
       <ArrowButton onClick={() => setShowOptions(!showOptions)}>

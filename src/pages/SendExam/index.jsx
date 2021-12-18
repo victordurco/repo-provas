@@ -9,7 +9,7 @@ import GreenButton from '../shared/GreenButton';
 import OptionsInput from '../shared/OptionsInput';
 
 import {
-  getTeachers, getCourses,
+  getTeachers, getCourses, getExamCategories,
 } from '../../services/repoprovas.services';
 
 const Home = () => {
@@ -17,6 +17,7 @@ const Home = () => {
 
   const [teachers, setTeachers] = useState([]);
   const [courses, setCourses] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [formData, setFormData] = useState({
     url: '',
     year: '',
@@ -44,6 +45,7 @@ const Home = () => {
   useEffect(() => {
     setCourses(getCourses());
     setTeachers(getTeachers());
+    setCategories(getExamCategories());
   }, []);
 
   return (
@@ -65,18 +67,26 @@ const Home = () => {
             handleFormDataChange={handleFormDataChange}
             options={semesters}
             title="Semestre"
-            width="133px"
+            width="100px"
           />
         </ExamName>
         <OptionsInput
           handleFormDataChange={handleFormDataChange}
           options={courses}
           title="Disciplina"
+          width="82%"
         />
         <OptionsInput
           handleFormDataChange={handleFormDataChange}
           options={teachers}
           title="Professor"
+          width="82%"
+        />
+        <OptionsInput
+          handleFormDataChange={handleFormDataChange}
+          options={categories}
+          title="Categoria"
+          width="133px"
         />
         <ButtonContainer>
           <GreenButton
