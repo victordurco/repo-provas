@@ -29,6 +29,8 @@
                 "namedComponents": "arrow-function"
             }
         ],
-        "arrow-body-style": [0, "always"]
+        "arrow-body-style": [0, "always"],
+        "react/prop-types": [0],
+        "import/prefer-default-export": [0]
     }
 }
