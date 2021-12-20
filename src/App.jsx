@@ -8,6 +8,7 @@ import {
 import GlobalStyle from './styles/GlobalStyle';
 import Home from './pages/Home';
 import SendExam from './pages/SendExam';
+import Teachers from './pages/Teachers';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/enviar" element={<SendExam />} />
+        <Route path="/professores" element={<Teachers />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
