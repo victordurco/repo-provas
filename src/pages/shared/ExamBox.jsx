@@ -1,18 +1,33 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useNavigate } from 'react-router-dom';
 
-const TeacherBox = ({ name, id, exams }) => {
-  const navigate = useNavigate();
+const ExamBox = ({
+  name, url, course, teacher, show,
+}) => {
+  const handleClick = () => {
+    window.open(
+      `${url}`,
+      'pdf prova',
+      'left=100,top=100,width=420,height=420',
+    );
+  };
+
   return (
-    <Container onClick={() => navigate(`/professores/${id}`)}>
+    <Container onClick={handleClick}>
       {name}
-      <span>{`Provas: ${exams.length}`}</span>
+      <span>
+        {
+          show === 'disciplina'
+            ? `Disciplina: ${course}`
+            : `Professor: ${teacher}`
+        }
+
+      </span>
     </Container>
   );
 };
 
-export default TeacherBox;
+export default ExamBox;
 
 const Container = styled.div`
   width: 150px;

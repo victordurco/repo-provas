@@ -12,10 +12,13 @@ const createExam = (body) => axios.post(`${URL_API}/exam`, body);
 
 const getTeachers = () => axios.get(`${URL_API}/teacher`);
 
+const getExamsByTeacherId = (id) => axios.get(`${URL_API}/exam/teacher/${id}`);
+
 export {
   getExamCategories,
   getCourseTeachers,
   getCourses,
   createExam,
   getTeachers,
+  getExamsByTeacherId,
 };

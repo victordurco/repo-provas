@@ -1,35 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { getTeachers } from '../../services/repoprovas.services';
+import { useParams } from 'react-router-dom';
+import { getExamsByTeacherId } from '../../services/repoprovas.services';
 
 import Logo from '../shared/Logo';
 import Title from '../shared/Title';
-import TeacherBox from '../shared/TeacherBox';
+import ExamBox from '../shared/ExamBox';
 
 const Teachers = () => {
-  const [teachers, setTeachers] = useState([]);
+  const [exams, setExams] = useState([]);
+  const { id } = useParams();
+  const teacherId = Number(id);
 
   useEffect(() => {
-    getTeachers()
+    getExamsByTeacherId(teacherId)
       .then((res) => {
-        setTeachers(res.data);
+        setExams(res.data);
       })
       .catch();
-  }, []);
+  }, [id]);
 
   return (
     <Container>
       <Logo />
-      <Title title="Professores" />
+      <Title title="Provas" />
       <TeachersWrapper>
         {
-          teachers.length > 0
-            ? teachers.map((teacher) => (
-              <TeacherBox
-                key={teacher.id}
-                name={teacher.name}
-                id={teacher.id}
-                exams={teacher.exams || []}
+          exams.length > 0
+            ? exams.map((exam) => (
+              <ExamBox
+                key={exam.id}
+                id={exam.id}
+                name={exam.name}
+                url={exam.url}
+                teacher={exam.teacher.name}
+                course={exam.course.name}
               />
             ))
             : ''

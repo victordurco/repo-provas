@@ -18,7 +18,7 @@ const Home = () => {
         <SearchTypeButton>
           por disciplina
         </SearchTypeButton>
-        <SearchTypeButton>
+        <SearchTypeButton onClick={() => navigate('/professores')}>
           por professor
         </SearchTypeButton>
       </SearchExamBox>
