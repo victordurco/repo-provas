@@ -14,12 +14,12 @@ const ExamBox = ({
 
   return (
     <Container onClick={handleClick}>
-      {name}
+      <Name>{name}</Name>
       <span>
         {
           show === 'disciplina'
             ? `Disciplina: ${course}`
-            : `Professor: ${teacher}`
+            : `Professor(a): ${teacher}`
         }
 
       </span>
@@ -46,4 +46,8 @@ const Container = styled.div`
   :hover{
     background-color: #797979
   }
+`;
+
+const Name = styled.span`
+  font-weight: 700;
 `;
