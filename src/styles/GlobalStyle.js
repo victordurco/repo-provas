@@ -35,6 +35,19 @@ const GlobalStyle = createGlobalStyle`
     body {
     line-height: 1;
     font-family: Roboto, sans-serif;
+      ::-webkit-scrollbar {
+        width: 5px;               
+        }
+
+    ::-webkit-scrollbar-track {
+        background: white;        
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #585858;    
+        border-radius: 20px;       
+        border: 3px solid #585858;  
+     }
     }
     ol, ul {
     list-style: none;

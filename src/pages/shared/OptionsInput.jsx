@@ -3,13 +3,18 @@ import styled from 'styled-components';
 import { ArrowDownOutline, ArrowUpOutline } from 'react-ionicons';
 
 const OptionsInput = ({
-  handleFormDataChange, options, title, width,
+  handleFormDataChange, options, title, width, prop,
 }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [choice, setChoice] = useState('');
 
   const hanldeClick = (item) => {
-    handleFormDataChange(item.name);
+    if (prop === 'semester') {
+      handleFormDataChange(prop, item.name);
+    } else {
+      handleFormDataChange(prop, item.id);
+    }
+
     setShowOptions(!showOptions);
     setChoice(item.name);
   };
@@ -41,6 +46,7 @@ const OptionsInput = ({
         {options
           ? options.map((item) => (
             <Option
+              key={item.id || item.name}
               onClick={() => hanldeClick(item)}
             >
               {item.name}
@@ -83,7 +89,7 @@ const ChoiceView = styled.div`
 
 const Options = styled.div`
   width: 100%;
-  height: ${(props) => (props.show ? '90px' : '0px')};
+  height: ${(props) => (props.show ? '80px' : '0px')};
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -119,7 +125,7 @@ const Option = styled.span`
   }
 `;
 
-const ArrowButton = styled.button`
+const ArrowButton = styled.div`
   border: none;
   background-color: transparent;
   cursor: pointer;

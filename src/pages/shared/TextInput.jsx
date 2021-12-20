@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TextInput = ({ title, width, placeholder }) => {
+const TextInput = ({
+  title, width, placeholder, handleFormDataChange, prop,
+}) => {
   return (
     <Container>
       {title}
       <Input
         width={width}
         placeholder={placeholder}
+        onChange={handleFormDataChange(prop)}
       />
     </Container>
   );
