@@ -14,6 +14,10 @@ const getTeachers = () => axios.get(`${URL_API}/teacher`);
 
 const getExamsByTeacherId = (id) => axios.get(`${URL_API}/exam/teacher/${id}`);
 
+const getCoursesWithExams = () => axios.get(`${URL_API}/course/exams`);
+
+const getPeriods = () => axios.get(`${URL_API}/period`);
+
 export {
   getExamCategories,
   getCourseTeachers,
@@ -21,4 +25,6 @@ export {
   createExam,
   getTeachers,
   getExamsByTeacherId,
+  getCoursesWithExams,
+  getPeriods,
 };

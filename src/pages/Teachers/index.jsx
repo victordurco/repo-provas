@@ -4,7 +4,7 @@ import { getTeachers } from '../../services/repoprovas.services';
 
 import Logo from '../shared/Logo';
 import Title from '../shared/Title';
-import TeacherBox from '../shared/TeacherBox';
+import NameNumberBox from '../shared/NameNumberBox';
 
 const Teachers = () => {
   const [teachers, setTeachers] = useState([]);
@@ -25,11 +25,11 @@ const Teachers = () => {
         {
           teachers.length > 0
             ? teachers.map((teacher) => (
-              <TeacherBox
+              <NameNumberBox
                 key={teacher.id}
                 name={teacher.name}
                 id={teacher.id}
-                exams={teacher.exams || []}
+                array={teacher.exams || []}
               />
             ))
             : ''

@@ -2,17 +2,17 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-const TeacherBox = ({ name, id, exams }) => {
+const NameNumberBox = ({ name, id, array }) => {
   const navigate = useNavigate();
   return (
     <Container onClick={() => navigate(`/professores/${id}`)}>
       {name}
-      <span>{`Provas: ${exams.length}`}</span>
+      <span>{`Provas: ${array.length}`}</span>
     </Container>
   );
 };
 
-export default TeacherBox;
+export default NameNumberBox;
 
 const Container = styled.div`
   width: 150px;

@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import SendExam from './pages/SendExam';
 import Teachers from './pages/Teachers';
 import Teacher from './pages/Teacher';
+import Courses from './pages/Courses';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/enviar" element={<SendExam />} />
         <Route path="/professores" element={<Teachers />} />
         <Route path="/professores/:id" element={<Teacher />} />
+        <Route path="/disciplinas" element={<Courses />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>
