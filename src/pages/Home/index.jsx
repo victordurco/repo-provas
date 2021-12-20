@@ -35,6 +35,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 30px 0 0 0;
+
 `;
 
 const SendExamButton = styled.button`
