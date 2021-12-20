@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
-import { getExamsByTeacherId, getExamCategories } from '../../services/repoprovas.services';
+import { getExamsByCourseId, getExamCategories } from '../../services/repoprovas.services';
 
 import Logo from '../shared/Logo';
 import Title from '../shared/Title';
 import ExamBox from '../shared/ExamBox';
 
-const Teacher = () => {
+const Course = () => {
   const [categories, setCategories] = useState([]);
   const [exams, setExams] = useState([]);
   const { id } = useParams();
-  const teacherId = Number(id);
+  const courseId = Number(id);
 
   useEffect(() => {
-    getExamsByTeacherId(teacherId)
+    getExamsByCourseId(courseId)
       .then((res) => {
         setExams(res.data);
       })
@@ -45,7 +45,7 @@ const Teacher = () => {
                         url={exam.url}
                         teacher={exam.teacher.name}
                         course={exam.course.name}
-                        show="disciplina"
+                        show="professor"
                       />
                     ))
                     : ''
@@ -59,7 +59,7 @@ const Teacher = () => {
   );
 };
 
-export default Teacher;
+export default Course;
 
 const Container = styled.div`
   width: 100%;

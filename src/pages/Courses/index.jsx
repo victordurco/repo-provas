@@ -39,6 +39,7 @@ const Courses = () => {
                         key={course.id}
                         name={course.name}
                         id={course.id}
+                        nextPage="disciplinas"
                         array={course.exams || []}
                       />
                     ))

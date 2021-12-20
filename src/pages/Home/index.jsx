@@ -15,7 +15,7 @@ const Home = () => {
       </SendExamButton>
       <SearchExamBox>
         Procurar prova
-        <SearchTypeButton>
+        <SearchTypeButton onClick={() => navigate('/disciplinas')}>
           por disciplina
         </SearchTypeButton>
         <SearchTypeButton onClick={() => navigate('/professores')}>

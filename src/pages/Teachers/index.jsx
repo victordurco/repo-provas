@@ -29,6 +29,7 @@ const Teachers = () => {
                 key={teacher.id}
                 name={teacher.name}
                 id={teacher.id}
+                nextPage="professores"
                 array={teacher.exams || []}
               />
             ))

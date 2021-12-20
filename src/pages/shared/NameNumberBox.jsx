@@ -2,10 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-const NameNumberBox = ({ name, id, array }) => {
+const NameNumberBox = ({
+  name, id, array, nextPage,
+}) => {
   const navigate = useNavigate();
   return (
-    <Container onClick={() => navigate(`/professores/${id}`)}>
+    <Container onClick={() => navigate(`/${nextPage}/${id}`)}>
       {name}
       <span>{`Provas: ${array.length}`}</span>
     </Container>
