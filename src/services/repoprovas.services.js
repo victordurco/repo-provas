@@ -2,25 +2,17 @@ import axios from 'axios';
 
 const URL_API = process.env.REACT_APP_URL_API;
 
-const getConfig = (token) => ({
-  headers: {
-    Authorization: `Bearer ${token}`,
-  },
-});
+const getCourseTeachers = (id) => axios.get(`${URL_API}/course/${id}/teachers`);
 
-/*const signIn = (body) => axios.post(`${URL_API}/sign-in`, body);
+const getCourses = () => axios.get(`${URL_API}/course`);
 
-const signUp = (body) => axios.post(`${URL_API}/sign-up`, body);
+const getExamCategories = () => axios.get(`${URL_API}/category`);
 
-const getUser = (token) => axios.get(`${URL_API}/user`, getConfig(token));
-
-const getStates = () => axios.get(`${URL_API}/states`);
-
-const subscribe = (token, body) => axios.post(`${URL_API}/subscribe`, body, getConfig(token));
-
-const getSubscription = (token) => axios.get(`${URL_API}/subscription`, getConfig(token));
+const createExam = (body) => axios.post(`${URL_API}/exam`, body);
 
 export {
-  signIn, signUp, getUser, getStates, subscribe, getSubscription,
+  getExamCategories,
+  getCourseTeachers,
+  getCourses,
+  createExam,
 };
-*/

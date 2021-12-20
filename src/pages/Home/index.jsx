@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from '../shared/Logo';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Logo />
-      <SendExamButton>
+      <SendExamButton onClick={() => navigate('/enviar')}>
         Enviar Prova
       </SendExamButton>
       <SearchExamBox>
