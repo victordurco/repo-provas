@@ -202,7 +202,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 30px 0 0 0;
-
+   animation: fadeIn 0.5s;
 `;
 
 const Form = styled.form`
@@ -217,6 +217,7 @@ const Form = styled.form`
   flex-direction: column;
   margin-top: 5vh;
   padding: 30px 30px;
+   background-image: linear-gradient(to top, #182825, #19322C);
 `;
 
 const ExamName = styled.div`

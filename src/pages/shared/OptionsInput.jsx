@@ -70,7 +70,7 @@ const Container = styled.div`
   position: relative;
   top: 0;
   left: 0;
-
+  color:#E8E3D7;
 `;
 
 const ChoiceView = styled.div`

@@ -26,11 +26,25 @@ const Container = styled.div`
   padding: 20px;
   text-align: center;
   font-size: 20px;
-  background-color: #C4C4C4;
+  font-weight: 700;
+  color: #1f1f1f;
+  background-image: linear-gradient(to left, #C4C4C4, #E9C1C8); 
   border-radius: 20px;
   cursor: pointer;
+  @keyframes go-back {
+    0% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+  animation: go-back 0.5s;
+
+
 
   :hover{
-    background-color: #797979
+    transform: scale(1.1);
+    transition: all 0.5s;
   }
 `;

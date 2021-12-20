@@ -16,7 +16,12 @@ export default Logo;
 const Container = styled.div`
     width: fit-content;
     height: fit-content;
-    font-size: 50px;
+    font-size: 40px;
     font-family: 'Rock Salt', cursive;
     cursor: pointer;
+    color:#E8E3D7;
+
+    @media (max-width: 600px) {
+      font-size: 30px;
+    }
 `;

@@ -35,28 +35,31 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 30px 0 0 0;
-
+   animation: fadeIn 0.5s;
 `;
 
 const SendExamButton = styled.button`
   width: 318px;
   height: 122px;
-  background-color: #c4c4c4;
+  background-image: linear-gradient(to top, #182825, #19322C); 
   font-size: 30px;
+  color:#E8E3D7;
   border-radius: 10px;
   margin-top: 15vh;
   cursor: pointer;
 
   :hover{
-    background-color: #a0a0a0;
+   transform: scale(1.1);
+    transition: all 0.5s;
   }
 `;
 
 const SearchExamBox = styled.div`
   width: 318px;
   height: 263px;
-  background-color: #c4c4c4;
+  background-image: linear-gradient(to top, #182825, #19322C); 
   font-size: 30px;
+  color:#E8E3D7;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -68,15 +71,18 @@ const SearchExamBox = styled.div`
 const SearchTypeButton = styled.div`
   width: 80%;
   height: 30%;
-  background-color: #eaeaea;
+  font-weight: 400;
+  background-image: linear-gradient(to top, #57A287, #E8E3D7);  ;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
   margin-top: 2vh;
   cursor: pointer;
+  color:#182825;
 
   :hover{
-    background-color: #a0a0a0;
+    transform: scale(1.1);
+    transition: all 0.5s;
   }
 `;

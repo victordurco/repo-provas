@@ -15,6 +15,6 @@ const Container = styled.div`
     width: 90%;
     height: fit-content;
     font-size: 40px;
-    color: #545454;
     margin: 15px 0;
+    color:#E8E3D7;
 `;
