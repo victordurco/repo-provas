@@ -63,11 +63,12 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 30px 0 0 0;
+   animation: fadeIn 0.5s;
 `;
 
 const CoursesWrapper = styled.div`
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, 186px);
   gap: 10px;
 `;

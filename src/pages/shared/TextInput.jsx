@@ -25,6 +25,7 @@ const Container = styled.div`
     display:flex;
     flex-direction: column;
     margin-bottom: 10px;
+    color:#E8E3D7;
 `;
 
 const Input = styled.input`

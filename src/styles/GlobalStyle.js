@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
     }
     
     body {
+    background-image: linear-gradient(to right, #2C5239, #57A187);
     line-height: 1;
     font-family: Roboto, sans-serif;
       ::-webkit-scrollbar {
@@ -77,6 +78,14 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
         cursor: pointer;
+    }
+       @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 `;
 export default GlobalStyle;
